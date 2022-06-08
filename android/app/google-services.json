@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "592071101330",
+    "project_id": "da-job-timer",
+    "storage_bucket": "da-job-timer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592071101330:android:76f1b7c4817d33f2b8cf4b",
+        "android_client_info": {
+          "package_name": "br.com.dev.airon.job_timer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592071101330-55i7cpambnge7jt356iitbudcmvirtt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN5ROMt5qciGoTXJUpd-7fmSMWhGRfsiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592071101330-55i7cpambnge7jt356iitbudcmvirtt6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
