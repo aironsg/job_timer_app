@@ -6,7 +6,7 @@ import 'package:job_timer/app/entities/project_status.dart';
 import 'package:job_timer/app/modules/home/widgets/header_project_menu.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
