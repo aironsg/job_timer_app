@@ -7,6 +7,7 @@ import 'package:job_timer/app/entities/project.dart';
 import 'package:job_timer/app/entities/project_status.dart';
 import 'package:job_timer/app/modules/home/controller/home_controller.dart';
 import 'package:job_timer/app/modules/home/widgets/header_project_menu.dart';
+import 'package:job_timer/app/modules/home/widgets/project_tile.dart';
 import 'package:job_timer/app/view_models/project_model.dart';
 
 class HomePage extends StatelessWidget {
@@ -16,8 +17,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocListener<HomeController, HomeState>(
+      bloc: controller,
       listener: (context, state) {
-        AsukaSnackbar.alert('Erro ao carregar projetos').show();
+        AsukaSnackbar.alert('erro ao buscar projetos');
       },
       child: Scaffold(
         drawer: const Drawer(
@@ -68,11 +70,7 @@ class HomePage extends StatelessWidget {
                     return SliverList(
                       delegate: SliverChildListDelegate(projects
                           .map(
-                            (project) => ListTile(
-                              title: Text(project.name),
-                              subtitle: Text('${project.estimate}h'),
-                            ),
-                          )
+                            (project) => ProjectTile(projectModel: project))
                           .toList()),
                     );
                   }),
