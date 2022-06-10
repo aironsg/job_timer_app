@@ -4,9 +4,30 @@
 
 ## Sumário
 
-1.Objetivo do App
-2.Telas do App
-3. Links Documentação
+1. Objetivo do App
+2. Caracteristicas do Projeto
+    - Linguagem Escolhida
+    - Implementação
+3. Telas do App
+4. Links Documentação
+
+# 1 Objetivos do App 
+
+O Aplicativo Job Timer foi desenvolvido em um dart week, junto com a [Academia do Flutter](http://academiadoflutter.com.br/), e tem por finalidade fazer o controle de fluxo de trabalho em horas,
+seja este fluxo de trabalho, Jobs freelances ou até mesmo Jobs Empresariais como o CLT ou PJ.
+
+# 2 Caracteriscas do Projeto 
+### Linguagem Escolhida 
+Este App foi desenvolvido com a linguagem Dart e o Framework Flutter por ser multPlataforma e isto ajudará a entender melhor como uma aplicação se comporta em diversos cenários.
+
+### Implementação
+
+O projeto deste App esta baseado em Bloc, permitindo uma adaptabilidade melhor dos componentes,
+desenvolvidos.
+    O App está divido em 4 telas, que são {Login, Projetos, Novos Projetos , Detalhes}
+
+
+# 3 Links Documentação
 
 ## Getting Started
 
