@@ -72,3 +72,6 @@ class _ProjectProgress extends StatelessWidget {
     );
   }
 }
+
+//aula 4 parada em 40:00
+// continuar a partir dai
