@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:job_timer/app/core/ui/job_timer_icons.dart';
 
@@ -63,15 +65,33 @@ class _ProjectProgress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final totalTasks = projectModel.tasks.fold<int>(0,((previousValue, task) => previousValue += task.duration));
+    var percent = 0.0;
+    if(totalTasks > 0){
+      percent = totalTasks / projectModel.estimate;
+    }
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Colors.grey[300]!,
         borderRadius: BorderRadius.circular(5),
       ),
+      child: Row(
+        children: [
+          Expanded(
+            child: LinearProgressIndicator(
+              value: percent,
+              backgroundColor: Colors.grey[400]!,
+              color: Theme.of(context).primaryColor,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Text('${projectModel.estimate}h'),
+          ),
+        ],
+      ),
     );
   }
 }
-
-//aula 4 parada em 40:00
-// continuar a partir dai
