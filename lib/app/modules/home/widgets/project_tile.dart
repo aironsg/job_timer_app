@@ -1,4 +1,4 @@
-import 'dart:html';
+
 
 import 'package:flutter/material.dart';
 import 'package:job_timer/app/core/ui/job_timer_icons.dart';
@@ -95,3 +95,4 @@ class _ProjectProgress extends StatelessWidget {
     );
   }
 }
+

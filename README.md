@@ -1,6 +1,9 @@
-# job_timer
-
-A new Flutter project.
+# Job Timer
+## Job Timer - Seu App de Controle de tempo.
+## Sumário
+1.Objetivo do App
+2.Telas do App
+3. Links Documentação
 
 ## Getting Started
 

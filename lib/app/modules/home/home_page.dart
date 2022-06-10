@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SliverPersistentHeader(
-                delegate: HeaderProjectMenu(),
+                delegate: HeaderProjectMenu(controller: controller),
                 pinned: true,
               ),
               BlocSelector<HomeController, HomeState, bool>(
