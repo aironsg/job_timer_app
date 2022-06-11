@@ -15,6 +15,7 @@ import 'modules/home/home_module.dart';
 import 'modules/login/login_module.dart';
 
 class AppModule extends Module {
+  
   @override
   List<Bind> get binds => [
         Bind.lazySingleton<AuthService>((i) => AuthServiceImpl()),

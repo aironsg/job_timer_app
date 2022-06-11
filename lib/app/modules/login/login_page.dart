@@ -9,6 +9,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_label
     final screenSize = MediaQuery.of(context).size;
 
     return BlocListener<LoginController, LoginState>(

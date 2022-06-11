@@ -72,8 +72,9 @@ class _NewTasks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Modular.to.pushNamed('/project/task/', arguments:projectModel );
+      onTap: () async {
+        await Modular.to.pushNamed('/project/task/', arguments:projectModel );
+        Modular.get<ProjectDetailController>().updateProject();
       },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
