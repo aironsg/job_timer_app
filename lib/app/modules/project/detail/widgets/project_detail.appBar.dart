@@ -34,7 +34,10 @@ class ProjectDetailAppBar extends SliverAppBar {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
-                              Text('10 tasks'),
+                              Text('10 tasks', style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18,
+                              ),),
                               _NewTasks(),
                             ],
                           ),
