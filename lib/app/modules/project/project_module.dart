@@ -4,6 +4,7 @@ import 'package:job_timer/app/modules/project/register/project_register_module.d
 import 'package:job_timer/app/modules/project/register/project_register_page.dart';
 
 import 'detail/project_detail_module.dart';
+import 'task/task_module.dart';
 
 class ProjectModule extends Module{
 
@@ -11,6 +12,7 @@ class ProjectModule extends Module{
   List<ModularRoute> get routes => [
     ModuleRoute('/register', module: ProjectRegisterModule()),
     ModuleRoute('/detail', module: ProjectDetailModule()),
+    ModuleRoute('/task', module: TaskModule()),
   ];
   
   
