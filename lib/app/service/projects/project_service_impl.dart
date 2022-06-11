@@ -1,6 +1,8 @@
 import 'package:job_timer/app/entities/project_status.dart';
+import 'package:job_timer/app/entities/project_task.dart';
 import 'package:job_timer/app/repositories/projects/project_repository.dart';
 import 'package:job_timer/app/view_models/project_model.dart';
+import 'package:job_timer/app/view_models/project_tasks.model.dart';
 
 import '../../entities/project.dart';
 import './project_service.dart';
@@ -28,6 +30,22 @@ class ProjectServiceImpl implements ProjectService {
   Future<List<ProjectModel>> findByStatus(ProjectStatus status) async {
     final project = await _repository.findByStatus(status);
     return project.map((e) => ProjectModel.fromEntity(e)).toList();
+  }
+
+  @override
+  Future<ProjectModel> addTask(int projectId, ProjectTasksModel task) async {
+   final projectTask = ProjectTask()
+   ..name = task.name
+   ..duration = task.duration;
+
+   final project = await _repository.addTask(projectId, projectTask);
+   return ProjectModel.fromEntity(project);
+  }
+
+  @override
+  Future<ProjectModel> findById(int projectId) async {
+   final project = await _repository.findById(projectId);
+   return ProjectModel.fromEntity(project);
   }
 
 }
