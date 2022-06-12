@@ -26,6 +26,17 @@ O projeto deste App esta baseado em Bloc, permitindo uma adaptabilidade melhor d
 desenvolvidos.
     O App está divido em 4 telas, que são {Login, Projetos, Novos Projetos , Detalhes}
 
+# 3 Images do App
+
+### Tela de Projetos
+![Tela de Projetos](assets/images/github/readme/Captura%20de%20Tela%20(18).png)
+
+### Tela de Criação de novos projetos
+
+![Novo Projetos](assets/images/github/readme/Captura%20de%20Tela%20(19).png)
+
+### Tela de Tarefas
+![Tarefas](assets/images/github/readme/Captura%20de%20Tela%20(23).png)
 
 # 4 Links Documentação
 

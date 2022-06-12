@@ -10,6 +10,7 @@ class AppWidgets
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       builder: asuka.builder,
       title: 'Job Timer',
       theme: AppConfigUI.themeData,

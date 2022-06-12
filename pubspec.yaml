@@ -75,6 +75,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+
+
   isar_generator: ^3.0.0-dev.0
   build_runner: ^2.1.11
 
@@ -120,4 +122,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-

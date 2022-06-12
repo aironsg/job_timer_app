@@ -27,7 +27,6 @@ class LoginController extends Cubit<LoginState> {
 
   Future<void> singOut() async {
     try {
-      emit(state.copyWith(status: LoginStatus.loading));
       await _authService.signOut();
     } catch (e, s) {
       log('erro ao deslogar', error:  e, stackTrace: s);

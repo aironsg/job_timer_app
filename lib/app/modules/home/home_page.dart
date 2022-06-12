@@ -13,7 +13,8 @@ import 'package:job_timer/app/view_models/project_model.dart';
 
 class HomePage extends StatelessWidget {
   final HomeController controller;
-   HomePage({super.key, required this.controller} );
+  final LoginController? loginController;
+   HomePage({super.key, required this.controller,this.loginController} );
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +24,10 @@ class HomePage extends StatelessWidget {
         AsukaSnackbar.alert('erro ao buscar projetos');
       },
       child: Scaffold(
-        drawer:  Drawer(
-          child: SafeArea(
+        drawer:const   Drawer(
+          child:SafeArea(
             child: ListTile(//fazendo mudança aqui
-              title: Text('Sair'),
+              title: Text(''),
             ),
           ),
         ),
