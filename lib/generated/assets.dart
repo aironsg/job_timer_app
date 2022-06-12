@@ -6,5 +6,13 @@ class Assets {
   static const String iconsIcon = 'assets/icons/icon.png';
   static const String imagesGoogle = 'assets/images/google.png';
   static const String imagesLogo = 'assets/images/logo.png';
+//   static const String readmeCaptura de Tela (18) = 'assets/images/github/readme/Captura de Tela (18).png';
+//   static const String readmeCaptura de Tela (19) = 'assets/images/github/readme/Captura de Tela (19).png';
+//   static const String readmeCaptura de Tela (20) = 'assets/images/github/readme/Captura de Tela (20).png';
+//   static const String readmeCaptura de Tela (21) = 'assets/images/github/readme/Captura de Tela (21).png';
+//   static const String readmeCaptura de Tela (22) = 'assets/images/github/readme/Captura de Tela (22).png';
+//   static const String readmeCaptura de Tela (23) = 'assets/images/github/readme/Captura de Tela (23).png';
+//   static const String readmeCaptura de Tela (24) = 'assets/images/github/readme/Captura de Tela (24).png';
+//   static const String readmeScreenshot2022-06-12-09-08-44-937Br.com.dev.airon.jobTimer = 'assets/images/github/readme/Screenshot_2022-06-12-09-08-44-937_br.com.dev.airon.job_timer.jpg';
 
-}
+ }
