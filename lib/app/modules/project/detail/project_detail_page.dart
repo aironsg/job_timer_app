@@ -29,9 +29,9 @@ class ProjectDetailPage extends StatelessWidget {
           switch (state.status) {
             case ProjectDetailStatus.initial:
               return const Center(
-               child:  Text('Carregando Projeto'),
+                child: Text('Carregando Projeto'),
               );
-              
+
             case ProjectDetailStatus.loading:
               return const Center(
                 child: CircularProgressIndicator(),
@@ -39,42 +39,43 @@ class ProjectDetailPage extends StatelessWidget {
             case ProjectDetailStatus.complete:
               return _buildProjectDetail(context, projectModel!);
             case ProjectDetailStatus.failure:
-              if(projectModel != null){
+              if (projectModel != null) {
                 return _buildProjectDetail(context, projectModel);
               }
               return const Center(
-               child:  Text('Erro ao Carregar Projeto'),
+                child: Text('Erro ao Carregar Projeto'),
               );
-
           }
-
-          
         },
       ),
     );
   }
 
   Widget _buildProjectDetail(BuildContext context, ProjectModel projectModel) {
-
-    final totalTask = projectModel.tasks.fold<int>(0, (totalValue, task) {
-      return totalValue += task.duration; 
-    },);
+    final totalTask = projectModel.tasks.fold<int>(
+      0,
+      (totalValue, task) {
+        return totalValue += task.duration;
+      },
+    );
 
     return CustomScrollView(
       slivers: [
-        ProjectDetailAppBar(projectModel: projectModel,),
+        ProjectDetailAppBar(
+          projectModel: projectModel,
+        ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 50.0),
+            child: ProjectPieChart(
+                projectEstimate: projectModel.estimate, totalTask: totalTask),
+          ),
+        ),
         SliverList(
-          delegate: SliverChildListDelegate(
-             [
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 50.0),
-                child: ProjectPieChart(
-                  projectEstimate: projectModel.estimate,
-                  totalTask: totalTask
-                ),
-              ),
-              ...projectModel.tasks.map((task) => ProjectTaskTile(task: task,)).toList(),
-            ],
+          delegate: SliverChildBuilderDelegate(
+            (context, index) =>
+                ProjectTaskTile(task: projectModel.tasks[index]),
+            childCount: projectModel.tasks.length,
           ),
         ),
         SliverFillRemaining(
