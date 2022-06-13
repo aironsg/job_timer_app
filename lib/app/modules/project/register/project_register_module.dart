@@ -5,14 +5,12 @@ import 'package:modular_bloc_bind/modular_bloc_bind.dart';
 
 class ProjectRegisterModule extends Module {
   @override
-  // TODO: implement binds
   List<Bind<Object>> get binds => [
         BlocBind.lazySingleton(
             (i) => ProjectRegisterController(service: i())), //AppModule
       ];
 
   @override
-  // TODO: implement routes
   List<ModularRoute> get routes => [
         ChildRoute(
           '/',

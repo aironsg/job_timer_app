@@ -8,13 +8,11 @@ import 'home_page.dart';
 class HomeModule extends Module{
 
   @override
-  // TODO: implement binds
   List<Bind> get binds => [
     BlocBind.lazySingleton((i) => HomeController(service: i())) // AppModule
   ];
 
   @override
-  // TODO: implement routes
   List<ModularRoute> get routes => [
     ChildRoute('/', child: ((context, args) => HomePage(controller : Modular.get()..loadProjects()))),
     

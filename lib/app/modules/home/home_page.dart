@@ -1,10 +1,6 @@
 import 'package:asuka/asuka.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_modular/flutter_modular.dart';
-import 'package:job_timer/app/core/database/database.dart';
-import 'package:job_timer/app/entities/project.dart';
-import 'package:job_timer/app/entities/project_status.dart';
 import 'package:job_timer/app/modules/home/controller/home_controller.dart';
 import 'package:job_timer/app/modules/home/widgets/header_project_menu.dart';
 import 'package:job_timer/app/modules/home/widgets/project_tile.dart';

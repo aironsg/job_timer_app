@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:job_timer/app/view_models/project_model.dart';
 import 'package:job_timer/app/view_models/project_tasks.model.dart';
 
 class ProjectTaskTile extends StatelessWidget {

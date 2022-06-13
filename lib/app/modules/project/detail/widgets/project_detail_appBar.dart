@@ -67,7 +67,7 @@ class ProjectDetailAppBar extends SliverAppBar {
 class _NewTasks extends StatelessWidget {
 
   final ProjectModel projectModel;
-  const _NewTasks({ super.key, required this.projectModel});
+  const _NewTasks({required this.projectModel});
 
   @override
   Widget build(BuildContext context) {
