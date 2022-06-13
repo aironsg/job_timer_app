@@ -13,6 +13,7 @@ class ProjectDetailController extends Cubit<ProjectDetailState> {
         super(const ProjectDetailState.initial());
 
   void setProject(ProjectModel projectModel) {
+    _sortTasks(projectModel);
     emit(
       state.copyWith(
           projectModel: projectModel, status: ProjectDetailStatus.complete),
@@ -21,6 +22,7 @@ class ProjectDetailController extends Cubit<ProjectDetailState> {
 
   void updateProject() async {
     final project = await _service.findById(state.projectModel!.id!);
+    _sortTasks(project);
     emit(state.copyWith(projectModel: project, status: ProjectDetailStatus.complete));
   }
 
@@ -33,5 +35,9 @@ class ProjectDetailController extends Cubit<ProjectDetailState> {
     } catch (e) {
       emit(state.copyWith(status: ProjectDetailStatus.failure));
     }
+  }
+
+  void _sortTasks(ProjectModel projectModel){
+    projectModel.tasks.sort((a, b) => b.id!.compareTo(a.id!),);
   }
 }

@@ -9,9 +9,46 @@ class ProjectPieChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final residual = (projectEstimate - totalTask);
     final theme = Theme.of(context);
+    var charData = <PieChartSectionData>[];
+    if (residual > 0) {
+      charData = [
+        PieChartSectionData(
+          value: totalTask.toDouble(),
+          color: theme.primaryColor,
+          showTitle: true,
+          title: '${totalTask}h',
+          titleStyle: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        PieChartSectionData(
+          value: residual.toDouble(),
+          color: theme.primaryColorLight,
+          showTitle: true,
+          title: '${residual}h',
+          titleStyle: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+      ];
+    }else{
+      charData = [
+        PieChartSectionData(
+        value: totalTask.toDouble(),
+        color: Colors.red,
+        showTitle: true,
+        title: '${totalTask}h',
+        titleStyle: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+      ),
+      ];
+    }
     // ignore: prefer_const_constructors
     return SizedBox(
       width: 200,
@@ -21,28 +58,7 @@ class ProjectPieChart extends StatelessWidget {
         children: [
           PieChart(
             PieChartData(
-              sections: [
-                PieChartSectionData(
-                  value: totalTask.toDouble(),
-                  color: theme.primaryColor,
-                  showTitle: true,
-                  title: '${totalTask}h',
-                  titleStyle: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-                PieChartSectionData(
-                  value: residual.toDouble(),
-                  color: theme.primaryColorLight,
-                  showTitle: true,
-                  title: '${residual}h',
-                  titleStyle: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ],
+              sections: charData,
             ),
           ),
           Align(

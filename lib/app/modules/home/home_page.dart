@@ -20,10 +20,13 @@ class HomePage extends StatelessWidget {
         AsukaSnackbar.alert('erro ao buscar projetos');
       },
       child: Scaffold(
-        drawer:const   Drawer(
+        drawer:   Drawer(
+          
           child:SafeArea(
-            child: ListTile(//fazendo mudança aqui
-              title: Text(''),
+            child: ElevatedButton.icon(
+              onPressed: () => controller.logout(),
+              icon: Icon(Icons.exit_to_app_sharp),
+              label: Text('Sair'),
             ),
           ),
         ),
