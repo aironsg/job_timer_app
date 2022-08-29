@@ -8,8 +8,8 @@
 2. Caracteristicas do Projeto
     - Linguagem Escolhida
     - Implementação
-3. Telas do App
-4. Links Documentação
+3. Telas do App.
+4. Links Documentação.
 
 # 1 Objetivos do App 
 
